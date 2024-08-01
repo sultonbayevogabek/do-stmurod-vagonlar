@@ -1,0 +1,51 @@
+<mat-drawer-container [hasBackdrop]="false">
+    <mat-drawer
+            class="min-w-[400px]"
+            #drawer
+            [mode]="'push'"
+            [position]="'end'"
+    >
+    </mat-drawer>
+    <mat-drawer-content class="grid place-items-center h-screen bg-blue-50">
+        <div class="flex gap-1">
+
+            <div class="flex flex-col gap-1">
+                @for (i of [7, 6, 5, 4]; track i) {
+                    <button
+                            (click)="drawer.open()"
+                            class="w-[60px] h-[161.4px] hover:scale-[1.03] duration-100 bg-[url('/assets/img/bg-container-vertical.png')] bg-no-repeat bg-center bg-cover text-xl text-white font-medium flex-shrink-0"
+                    >{{ i }}</button>
+                }
+            </div>
+
+            <div class="flex flex-col justify-between">
+                <div class="flex gap-1">
+                    @for (i of [8, 9, 10, 11, 12]; track i) {
+                        <button
+                                (click)="drawer.open()"
+                                class="w-[161.4px] h-[60px] hover:scale-[1.03] duration-100 bg-[url('/assets/img/bg-container.png')] bg-no-repeat bg-center bg-cover text-xl text-white font-medium flex-shrink-0"
+                        >{{ i }}</button>
+                    }
+                </div>
+                <div class="flex gap-1">
+                    @for (i of [3, 2, 1, 18, 17]; track i) {
+                        <button
+                                (click)="drawer.open()"
+                                class="w-[161.4px] h-[60px] hover:scale-[1.03] duration-100 bg-[url('/assets/img/bg-container.png')] bg-no-repeat bg-center bg-cover text-xl text-white font-medium flex-shrink-0"
+                        >{{ i }}</button>
+                    }
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                @for (i of [13, 14, 15, 16]; track i) {
+                    <button
+                            (click)="drawer.open()"
+                            class="w-[60px] h-[161.4px] hover:scale-[1.03] duration-100 bg-[url('/assets/img/bg-container-vertical.png')] bg-no-repeat bg-center bg-cover text-xl text-white font-medium flex-shrink-0"
+                    >{{ i }}</button>
+                }
+            </div>
+
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
