@@ -73,13 +73,24 @@
                         >{{ i }}</button>
                     }
                 </div>
-                <div class="flex gap-2">
-                    @for (i of [3, 2, 1, 18, 17]; track i) {
-                        <button
-                                (click)="drawer.open()"
-                                class="w-[161.4px] h-[60px] hover:scale-[1.03] duration-100 bg-[url('/assets/img/bg-container.png')] bg-no-repeat bg-center bg-cover text-xl text-white font-medium flex-shrink-0"
-                        >{{ i }}</button>
-                    }
+                <div class="flex justify-between">
+                    <div class="flex gap-2">
+                        @for (i of [3, 2, 1]; track i) {
+                            <button
+                                    (click)="drawer.open()"
+                                    class="w-[141.4px] h-[60px] hover:scale-[1.03] duration-100 bg-[url('/assets/img/bg-container.png')] bg-no-repeat bg-center bg-cover text-xl text-white font-medium flex-shrink-0"
+                            >{{ i }}</button>
+                        }
+                    </div>
+
+                    <div class="flex gap-2">
+                        @for (i of [18, 17]; track i) {
+                            <button
+                                    (click)="drawer.open()"
+                                    class="w-[141.4px] h-[60px] hover:scale-[1.03] duration-100 bg-[url('/assets/img/bg-container.png')] bg-no-repeat bg-center bg-cover text-xl text-white font-medium flex-shrink-0"
+                            >{{ i }}</button>
+                        }
+                    </div>
                 </div>
             </div>
 
