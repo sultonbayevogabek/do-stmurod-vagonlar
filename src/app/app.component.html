@@ -1,14 +1,60 @@
 <mat-drawer-container [hasBackdrop]="false">
     <mat-drawer
-            class="min-w-[400px]"
+            class="min-w-[800px]"
             #drawer
             [mode]="'push'"
             [position]="'end'"
     >
-    </mat-drawer>
-    <mat-drawer-content class="grid place-items-center h-screen bg-blue-50">
-        <div class="flex gap-1">
 
+
+        <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 sticky top-0 z-10">
+                <tr>
+                    <th scope="col" class="p-6">
+                        №
+                    </th>
+                    <th scope="col" class="p-6">
+                        Харажат
+                    </th>
+                    <th scope="col" class="p-6">
+                        Сони
+                    </th>
+                    <th scope="col" class="p-6">
+                        Нархи
+                    </th>
+                    <th scope="col" class="p-6">
+                        Суммаси
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                    @for (item of data; track data; let index = $index) {
+                        <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                            <td class="p-6">
+                                {{ index + 1 }}
+                            </td>
+                            <th scope="row" class="p-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ item.name }}
+                            </th>
+                            <td class="p-6">
+                                {{ item.count }}
+                            </td>
+                            <td class="p-6">
+                                {{ item.price }}
+                            </td>
+                            <td class="p-6">
+                                {{ item.price * item.count }}
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </mat-drawer>
+    <mat-drawer-content class="grid place-items-center h-screen bg-[url('/assets/img/bg-grass.jpg')]">
+        <div class="flex gap-1">
             <div class="flex flex-col gap-1">
                 @for (i of [7, 6, 5, 4]; track i) {
                     <button
