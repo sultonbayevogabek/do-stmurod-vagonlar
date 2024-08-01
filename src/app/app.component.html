@@ -54,8 +54,8 @@
 
     </mat-drawer>
     <mat-drawer-content class="grid place-items-center h-screen bg-[url('/assets/img/bg-grass.jpg')]">
-        <div class="flex gap-1">
-            <div class="flex flex-col gap-1">
+        <div class="flex gap-2">
+            <div class="flex flex-col gap-2">
                 @for (i of [7, 6, 5, 4]; track i) {
                     <button
                             (click)="drawer.open()"
@@ -65,7 +65,7 @@
             </div>
 
             <div class="flex flex-col justify-between">
-                <div class="flex gap-1">
+                <div class="flex gap-2">
                     @for (i of [8, 9, 10, 11, 12]; track i) {
                         <button
                                 (click)="drawer.open()"
@@ -73,7 +73,7 @@
                         >{{ i }}</button>
                     }
                 </div>
-                <div class="flex gap-1">
+                <div class="flex gap-2">
                     @for (i of [3, 2, 1, 18, 17]; track i) {
                         <button
                                 (click)="drawer.open()"
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-col gap-2">
                 @for (i of [13, 14, 15, 16]; track i) {
                     <button
                             (click)="drawer.open()"
